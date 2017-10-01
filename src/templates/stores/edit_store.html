@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+    <h1>Edit Store</h1>
+</div>
+<div class="form-size">
+    <form method="POST">
+        <div class="form-group">
+            <label for="name">Store name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="A name" value="{{ store.name }}">
+        </div>
+        <div class="form-group">
+            <label for="url_prefix">Store URL</label>
+            <input type="text" class="form-control" id="url_prefix" name="url_prefix" placeholder="http://"
+                   value="{{ store.url_prefix }}">
+        </div>
+        <div class="form-group">
+            <label for="tag_name">Tag name</label>
+            <input type="text" class="form-control" id="tag_name" name="tag_name" placeholder="div"
+                   value="{{ store.tag_name }}">
+        </div>
+        <div class="form-group">
+            <label for="query">Query</label>
+            <input type="text" class="form-control" id="query" name="query" placeholder='{"id": "price"}'
+                   value='{{ store.query | tojson }}'>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+{% endblock %}

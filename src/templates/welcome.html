@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Price Alerts Service</h1>
+    <p>We track online store websites to alert you when an item's price goes under you price limit.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('users.signup_user') }}" role="button">Sign up</a>
+    <a class="btn btn-default btn-lg" href="{{ url_for('users.login_user') }}" role="button">Log in</a>
+</div>
+{% endblock %}
