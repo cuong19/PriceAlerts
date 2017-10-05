@@ -1,6 +1,8 @@
+import os
+
 DEBUG = False
 ADMINS = frozenset([
     "admin@example.com"
 ])
-DATABASE_URI = "mongodb://127.0.0.1:27017"
+DATABASE_URI = os.environ.get("MONGOLAB_URI")
 DATABASE_COLLECTION = 'price_alerts'
