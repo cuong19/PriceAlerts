@@ -5,4 +5,4 @@ ADMINS = frozenset([
     "admin@example.com"
 ])
 DATABASE_URI = os.environ.get("MONGODB_URI")
-DATABASE_COLLECTION = 'price_alerts'
+DATABASE_COLLECTION = os.environ.get("MONGODB_DATABASE")
